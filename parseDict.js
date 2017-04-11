@@ -19,6 +19,8 @@ function formatData(data){
     word = lineSplit[0];
     syllables = countSyllables(lineSplit[1]);
 
+    if (word.includes('(1)')) word = word.slice(0, -3);
+
     if (wordArray[syllables]) {
       wordArray[syllables].push(word);
     }
